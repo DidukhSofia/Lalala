@@ -1,0 +1,9 @@
+.sessions {
+    padding: 100px 80px 100px 140px;
+    width: 100%;
+    background: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
