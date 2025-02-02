@@ -6,7 +6,6 @@ const Sessions = () => {
   return (
     <section className="sessions">
       <Filter />
-      
     </section>
   );
 };
