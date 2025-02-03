@@ -44,7 +44,7 @@ const Filter = () => {
       setSlides(generatedSlides);
     };
 
-    generateSlides(365);
+    generateSlides(14);
   }, []);
   return (
     <div className="filter">
