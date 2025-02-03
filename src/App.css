@@ -25,6 +25,7 @@ a:hover  {
 
 aside, nav, footer, header, section, main {
 	display: block;
+
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -87,3 +88,4 @@ label {
 legend {
 	display: block;
 }
+

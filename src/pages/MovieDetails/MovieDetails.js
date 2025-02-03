@@ -6,6 +6,8 @@ import { uk } from "date-fns/locale";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+
+
 const MovieDetails = () => {
   const { movieId } = useParams();
   const today = new Date();
@@ -34,7 +36,6 @@ const MovieDetails = () => {
         <div className="main">
           <section className="main_context">
             <div className="main__content-text">
-              {/* Movie Info Section */}
               <h1 className="main__title">{movie.filmName}</h1>
               <p className="main__age-rating">{movie.ageRating}+</p>
               <h3 className="main__rating">
