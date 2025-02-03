@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./MovieDetails.css";
-import Arrow from "../../images/back-arrow.png";
 import { format, parseISO, isWithinInterval, addDays } from "date-fns";
 import { uk } from "date-fns/locale";
 import DatePicker from "react-datepicker";

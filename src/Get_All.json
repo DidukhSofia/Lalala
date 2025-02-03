@@ -170,7 +170,7 @@
     },
     {
       "id": 2,
-      "filmName": "The Dark Knight",
+      "filmName": "Chernobyl",
       "director": {
         "id": 1,
         "name": "Christopher Nolan"
@@ -180,7 +180,7 @@
       "duration": 152,
       "ageRating": 13,
       "releaseDate": "2008-07-18",
-      "posterPath": "/img/loki-img.png",
+      "posterPath": "/img/chernobel.png",
       "backgroundImagePath": "/images/darkknight/background.jpg",
       "voteAverage": 9.0,
       "voteCount": 250000,

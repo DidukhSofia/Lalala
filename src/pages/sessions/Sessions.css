@@ -1,15 +1,15 @@
 body{
-    background-image: url("../../img/background.png");
+    background-image: url("../../images/background.png");
     background-size: cover;
     background-color: #000000;
 }
+
 .head {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    padding: 2%;    
     align-items: center;
-    margin-bottom: 70px;
+    width: 100%;
 }
 
 .head__authentication {
@@ -51,8 +51,9 @@ option {
     background-color: lightgrey; 
 }
 
+
 .sessions {
-    padding: 100px 80px 100px 140px;
+    padding: 10px 80px 100px 140px;
     width: 100%;
     min-height: 100vh;
     display: flex;
