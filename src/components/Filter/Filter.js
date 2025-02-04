@@ -96,7 +96,7 @@ const Filter = () => {
       </Splide>
 
       {/* Передаємо фільтрацію у Filters */}
-      <Filters movies={movies} setFilteredMovies={setFilteredMovies} />
+      <Filters movies={movies} setFilteredMovies={setFilteredMovies} selectedDate={selectedDate} />
 
       <div className="movies-list">
         {filteredMovies.map((movie, index) => (

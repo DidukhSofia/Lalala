@@ -46,7 +46,7 @@ const Card = ({ card, selectedDate }) => {
                   </Link>
                 ))
               ) : (
-                <p>No sessions available for this date.</p> // Display message if no sessions are available for the selected date
+                <p>No sessions available for this date.</p>
               )}
             </div>
           </div>
