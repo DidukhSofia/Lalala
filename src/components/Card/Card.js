@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
 
-const Card = ({ card }) => {
+const Card = ({ card, selectedDate }) => {
+  // Filter sessions by the selected date and sort by start time
+  const filteredSessions = card.sessions
+    .filter(session => session.startTime.startsWith(selectedDate)) // Only sessions on the selected date
+    .sort((a, b) => new Date(a.startTime) - new Date(b.startTime)); // Sort sessions by start time
+
   return (
     <div className="movie-card">
       <Link to={`/movies/${card.id}`} className="movie__content-box-link">
@@ -28,16 +33,21 @@ const Card = ({ card }) => {
             </div>
 
             <div className="movie-sessions">
-              {card.sessions.map((session, index) => (
-                <Link key={index} to={`/session/${session.id}`} className="session-time-link">
-                  <span className="session-time">
-                    {new Date(session.startTime).toLocaleTimeString([], {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
-                  </span>
-                </Link>
-              ))}
+              {/* Display sessions that match the selected date */}
+              {filteredSessions.length > 0 ? (
+                filteredSessions.map((session, index) => (
+                  <Link key={index} to={`/session/${session.id}`} className="session-time-link">
+                    <span className="session-time">
+                      {new Date(session.startTime).toLocaleTimeString([], {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </span>
+                  </Link>
+                ))
+              ) : (
+                <p>No sessions available for this date.</p> // Display message if no sessions are available for the selected date
+              )}
             </div>
           </div>
         </div>
