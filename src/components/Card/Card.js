@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
+import { FaStar } from "react-icons/fa";
+
 
 const Card = ({ card, selectedDate }) => {
   // Filter sessions by the selected date and sort by start time
@@ -20,7 +22,13 @@ const Card = ({ card, selectedDate }) => {
           <div className="movie__content-text">
             <div className="movie-details">
               <h2 className="movie-title">{card.filmName}</h2>
-              <div className="movie-rating">Rating: {card.voteAverage}</div>
+              <div className="mainCard-rating">
+                {Array(Math.round(card.voteAverage / 2))
+                  .fill("")
+                  .map((_, index) => (
+                    <FaStar key={index} style={{ color: "red", fontSize: "18px" }} />
+                  ))}
+              </div>
               <p className="movie-genres">
                 Genres: {card.genres.map((g) => g.name).join(", ")}
               </p>
@@ -36,7 +44,7 @@ const Card = ({ card, selectedDate }) => {
               {/* Display sessions that match the selected date */}
               {filteredSessions.length > 0 ? (
                 filteredSessions.map((session, index) => (
-                  <Link key={index} to={`/session/${session.id}`} className="session-time-link">
+                  <Link key={index} to={`/widget/${session.id}/seatplan`} className="session-time-link">
                     <span className="session-time">
                       {new Date(session.startTime).toLocaleTimeString([], {
                         hour: "2-digit",
