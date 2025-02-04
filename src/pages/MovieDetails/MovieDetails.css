@@ -1,30 +1,3 @@
-/* Базовий reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-/* Загальні стилі */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
 .header {
   align-items: center;
   padding-top: 80px; 
@@ -69,15 +42,18 @@ button {
 }
 
 .main_context {
-    justify-content: space-between;
-    display: flex;
-    gap: 30px;
+  width:100%;
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
 
-  }
+}
+
 .main__content-text {
     order: 2; 
     padding-right: 35px;
     padding-top: 60px;
+    min-width: 500px;
 
 }
 .main__content-image {
@@ -183,7 +159,7 @@ button {
   .main__director {
     font-weight: 200;
     font-size: 20px;
-    margin-bottom: 110px;
+    margin-bottom: 60px;
     color: #FFFFFF;
     max-width: 650px;
     font-family: "Lato", sans-serif;
@@ -194,16 +170,34 @@ button {
     font-weight: 700;
 }
 .main {
-  padding: 100px 50px 100px 100px;
+  padding-left:100px;
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/background.png");
+  background-size: cover;
+  background-color: #000000;
 }
 
 .main__poster {
-  max-width: 350px;
+  width: 300px;
+  object-fit: cover;
+
 }
 .main__poster img {
   border-radius: 26px;
   width: 100%;
+  width:300px;
+  height:400px;
+  object-fit: cover;
+
   
+}
+
+.main__button{
+  padding: 0 20px;
 }
 
 .main__button-right {
@@ -212,16 +206,15 @@ button {
   padding: 10px 20px;
   font-weight: 800;
   border-radius: 16px;
+
 }
 
 .main__button-right:hover {
-  background-color: #f9f9f97a;
+  background-color: darkred;
   color: #fff;
 }
 .main_schedule {
     display: flex;
-    justify-content: center; 
-    padding-right: 80px;
 
   }
  .main_schedule-window{
@@ -308,11 +301,14 @@ margin-left: 40px;
 
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 780px) {
     .main_context {
       flex-direction: column; 
       align-items: center; 
       text-align: left;
+    }
+    .main{
+      padding-right:60px;
     }
   
     .main__content-text {
@@ -344,10 +340,6 @@ margin-left: 40px;
     .main__poster img {
       width: 100%; 
       height: auto; 
-    }
-  
-    .main__button-right {
-      margin-top: 20px; 
     }
   
     .main_schedule {

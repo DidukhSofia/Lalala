@@ -70,7 +70,7 @@ const MovieDetails = () => {
             </div>
             <div className="main__content-image">
               <div className="main__poster">
-                <img src={movie.posterPath} />
+                <img src={movie.posterPath}/>
               </div>
             </div>
           </section>
