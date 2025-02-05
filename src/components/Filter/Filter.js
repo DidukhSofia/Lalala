@@ -66,7 +66,7 @@ const Filter = () => {
     <div className="filter">
       <Splide
         options={{
-          type: "loop",
+          type: "slide",
           perPage: 7,
           perMove: 1,
           arrows: true,

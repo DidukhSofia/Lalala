@@ -41,10 +41,13 @@ const Card = ({ card, selectedDate }) => {
             </div>
 
             <div className="movie-sessions">
-              {/* Display sessions that match the selected date */}
               {filteredSessions.length > 0 ? (
                 filteredSessions.map((session, index) => (
-                  <Link key={index} to={`/widget/${session.id}/seatplan`} className="session-time-link">
+                  <Link 
+                    key={index} 
+                    to={`/widget/${card.id}/seatplan?sessionId=${session.id}`}
+                    className="session-time-link"
+                  >
                     <span className="session-time">
                       {new Date(session.startTime).toLocaleTimeString([], {
                         hour: "2-digit",
@@ -57,6 +60,7 @@ const Card = ({ card, selectedDate }) => {
                 <p>No sessions available for this date.</p>
               )}
             </div>
+
           </div>
         </div>
       </Link>

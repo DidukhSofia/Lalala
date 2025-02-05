@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { format } from "date-fns";
 import "./MovieList.css";
-
-// Імпортуємо Swiper для слайдера
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { FaStar } from "react-icons/fa";
+
+
 
 const MovieList = ({ movies = [] }) => {
   if (!movies || movies.length === 0) {
@@ -42,7 +42,13 @@ const MovieList = ({ movies = [] }) => {
               />
             </Link>     
             <h3 className="movie-list__name">{movie.filmName}</h3>
-            <span className="movie-list__rating">{movie.voteAverage} ★</span>
+            <div className="movie-list__rating">
+                {Array(Math.round(movie.voteAverage / 2))
+                  .fill("")
+                  .map((_, index) => (
+                    <FaStar key={index} style={{ color: "red", fontSize: "18px" }} />
+                  ))}
+            </div>
             <p className="move-list__genres">
                 <strong>Жанр: </strong>
                 {movie.genres.map((genre) => genre.name).join(", ")}

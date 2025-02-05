@@ -57,7 +57,7 @@ const MovieDetails = () => {
               {new Date(movie.releaseDate).toLocaleDateString("uk-UA")}
             </p>
             <p className="main__actors">
-              <strong>У головних ролях:</strong>
+              <strong className="main__actors-text">У головних ролях:</strong>
               {movie.actors.map((actor) => actor.name).join(", ")}
             </p>
             <p className="main__description">{movie.description}</p>
@@ -99,7 +99,7 @@ const MovieDetails = () => {
                 .filter((session) => session.startTime.split("T")[0] === selectedDate)
                 .map((session) => (
                   <div key={session.id} className="session">
-                    <Link to={`/widget/${session.id}/seatplan`}
+                    <Link to={`/widget/${movie.id}/seatplan?sessionId=${session.id}`}
                       className="session__time-link"
 
                       onClick={(event) => {
