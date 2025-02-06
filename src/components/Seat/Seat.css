@@ -1,0 +1,56 @@
+.Seat {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	background-color: #4CAF50;  /* Green for available seats */
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .Seat.selected {
+	background-color: #B0B0B0;  /* Gray for selected seats before payment */
+  }
+  
+  .Seat.paid {
+	background-color: #FF0000;  /* Red for paid seats */
+  }
+  
+  .Seat.unavailable {
+	background-color: #A9A9A9;  /* Dark gray for unavailable seats after payment */
+	cursor: not-allowed;  /* Disable pointer cursor for unavailable seats */
+  }
+  
+  .Seat:hover {
+	background-color: #8BC34A;  /* Lighter green on hover for available seats */
+  }
+  
+  .Row {
+	display: flex;
+	justify-content: center;  /* Center seats within each row */
+	margin-bottom: 10px;
+  }
+  
+  h1 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+  }
+  
+  button {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+  }
+  
+  button:hover {
+	background-color: #45a049;
+  }
+  
+  
