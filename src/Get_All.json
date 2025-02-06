@@ -13,8 +13,8 @@
       "voteAverage": 8.8,
       "voteCount": 20000,
       "directorId": 1,
-      "genres": [ 1, 2 ],
-      "actors": [ 1, 2, 3 ]
+      "genres": [1, 2],
+      "actors": [1, 2, 3]
     }
   ],
   "directors": [
@@ -98,55 +98,64 @@
       "id": 1,
       "row": 1,
       "column": 1,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 2,
       "row": 1,
       "column": 2,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 3,
       "row": 1,
       "column": 3,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 4,
       "row": 2,
       "column": 1,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 5,
       "row": 2,
       "column": 2,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 6,
       "row": 2,
       "column": 3,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 7,
       "row": 3,
       "column": 1,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 8,
       "row": 3,
       "column": 2,
-      "hallId": 1
+      "hallId": 1,
+      "sessionId": 1
     },
     {
       "id": 9,
       "row": 3,
       "column": 3,
-      "hallId": 1
-    } 
+      "hallId": 1,
+      "sessionId": 1
+    }
   ]
 }
