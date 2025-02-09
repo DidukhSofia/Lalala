@@ -124,13 +124,13 @@ const MovieDetails = () => {
                   .filter((session) => session.startTime.split("T")[0] === selectedDate)
                   .map((session) => (
                     <div key={session.id} className="session">
-                      <Link
-                        to={`/widget/${movie.id}/seatplan?sessionId=${session.id}`}
-                        className="session__time-link"
-                        onClick={(event) => event.stopPropagation()}
-                      >
-                        {format(parseISO(session.startTime), "HH:mm")}
-                      </Link>
+                    <Link
+                      to={`/session/${session.id}/hall/${session.hallId}`} // Динамічний шлях
+                      className="session__time-link"
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      {format(parseISO(session.startTime), "HH:mm")}
+                    </Link>
                     </div>
                   ))}
             </div>

@@ -85,7 +85,7 @@ const Card = ({ card, selectedDate }) => {
                   {filteredSessions.map(session => (
                     <div key={session.id} className="session">
                       <Link
-                        to={`/widget/${card.id}/seatplan?sessionId=${session.id}&hallId=${session.hallId}`}
+                        to={`/session/${session.id}/hall/${session.hallId}`} // Dynamic path
                         className="session__time-link"
                         onClick={(event) => event.stopPropagation()}
                       >
@@ -95,7 +95,7 @@ const Card = ({ card, selectedDate }) => {
                   ))}
                 </div>
               ) : (
-                <p>No sessions available for this date.</p>
+                <p>No sessions available for this movie.</p>
               )}
             </div>
           </div>
