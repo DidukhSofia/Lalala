@@ -74,11 +74,11 @@ export default function Logout() {
   return (
     <div className="auth-container">
       {!isAuthenticated ? (
-        <button onClick={() => setIsModalVisible(true)} className="auth-window__form">
-          Увійти / Реєстрація
+        <button onClick={() => setIsModalVisible(true)} className="auth-window__form-btn">
+          Увійти
         </button>
       ) : (
-        <button onClick={handleLogout} className="auth-window__form">
+        <button onClick={handleLogout} className="auth-window__form-btn">
           Вийти
         </button>
       )}

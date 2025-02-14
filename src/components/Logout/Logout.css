@@ -10,6 +10,14 @@
     z-index: 1000;
   }
   
+  .auth-window__form-btn {
+    color: white;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+
+  }
+
   .auth-window__form {
     background-color: #1e1e1e;
     padding: 30px;

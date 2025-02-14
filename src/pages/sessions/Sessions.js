@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Sessions.css";
 import Filter from "../../components/Filter/Filter";
-import Logout from "../../components/Logout/Logout";
 
 function Head(){
 
@@ -11,7 +10,6 @@ function Head(){
         <h1 className="head-title">СЕАНСИ</h1>
       </div>
       <div className="head__authentication">
-        <Logout/>
       </div>
     </div>
   );
